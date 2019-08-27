@@ -4,7 +4,7 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 </div>
-<div class="{'collapse': collapseNavMenu}" (click)="toggleNavMenu()">
+<div [ngClass]="{'collapse': collapseNavMenu}" (click)="toggleNavMenu()">
   <ul class="nav flex-column">
     <li class="nav-item px-3">
       <a class="nav-link" routerLink="/home">Home</a>
