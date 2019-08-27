@@ -12,6 +12,10 @@ import { ContactComponent } from './pages/contact/components/contact/contact.com
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ToastsComponent } from './shared/components/toasts/toasts.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { environment } from '../environments/environment';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './shared/services/InMemoryDbService';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,9 +26,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BlogComponent,
     AboutComponent, ContactComponent, ToastsComponent
   ],
-  imports: [
-    BrowserModule, FormsModule, ReactiveFormsModule,
-    AppRoutingModule, NgbModule,
+  imports: [ BrowserModule, FormsModule, ReactiveFormsModule, HttpClientModule,
+    AppRoutingModule, NgbModule, environment.production ? HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {delay: 100}) : []
   ],
   providers: [],
   bootstrap: [AppComponent]
