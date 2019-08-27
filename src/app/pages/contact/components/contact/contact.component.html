@@ -1,0 +1,26 @@
+<div class="container-fluid">
+  <div style="text-align:center">
+    <h2>Contact Us</h2>
+    <p>Swing by for a cup of coffee, or leave us a message:</p>
+  </div>
+  <div class="row">
+    <div class="col">
+      <form [formGroup]="contactMeForm">
+        <label class="col-md-6 col-xs-12">First Name
+          <input class="form-control" type="text" formControlName="firstName" placeholder="Your name..">
+        </label>
+        <label class="col-md-6 col-xs-12">Last Name
+          <input class="form-control" type="text" formControlName="lastName" placeholder="Your last name..">
+        </label>
+        <label class="col-sm-12">Message
+          <textarea class="form-control" formControlName="messageBody" placeholder="Write something.."
+                    style="height:170px"></textarea>
+        </label>
+        <div class="col-12">
+          <button class="btn btn-primary col-xs-12 col-sm-2 float-right" type="button" (click)="onSubmit()">Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

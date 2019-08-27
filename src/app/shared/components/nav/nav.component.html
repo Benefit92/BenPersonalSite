@@ -1,0 +1,22 @@
+<div class="top-row pl-4 navbar navbar-dark">
+  <a class="navbar-brand" href="">Bureau of Ben</a>
+  <button class="navbar-toggler" (click)="toggleNavMenu()">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+</div>
+<div class="{'collapse': collapseNavMenu}" (click)="toggleNavMenu()">
+  <ul class="nav flex-column">
+    <li class="nav-item px-3">
+      <a class="nav-link" routerLink="/home">Home</a>
+    </li>
+    <li class="nav-item px-3">
+      <a class="nav-link" routerLink="/blog">Blog</a>
+    </li>
+    <li class="nav-item px-3">
+      <a class="nav-link" routerLink="/about">About Me</a>
+    </li>
+    <li class="nav-item px-3">
+      <a class="nav-link" routerLink="/contact">Contact Me</a>
+    </li>
+  </ul>
+</div>
