@@ -8,6 +8,5 @@ export class NavComponent {
 
   toggleNavMenu() {
     this.collapseNavMenu = !this.collapseNavMenu;
-    console.log(this.collapseNavMenu);
   }
 }

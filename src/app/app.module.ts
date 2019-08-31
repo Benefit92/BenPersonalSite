@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavComponent } from './shared/components/nav/nav.component';
@@ -15,7 +14,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { environment } from '../environments/environment';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './shared/services/InMemoryDbService';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+// import ngx-translate and the http loader
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 @NgModule({
   declarations: [
@@ -24,12 +26,29 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     PageNotFoundComponent,
     BlogComponent,
-    AboutComponent, ContactComponent, ToastsComponent
-  ],
-  imports: [ BrowserModule, FormsModule, ReactiveFormsModule, HttpClientModule,
-    AppRoutingModule, NgbModule, environment.production ? HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {delay: 100}) : []
-  ],
+    AboutComponent,
+    ContactComponent,
+    ToastsComponent
+  ], imports: [
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader, useFactory: HttpLoaderFactory, deps: [ HttpClient ]
+      }
+    }),
+    AppRoutingModule,
+    NgbModule,
+    environment.production ? HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {delay: 100}) : [] ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [ AppComponent ]
 })
-export class AppModule { }
+export class AppModule {
+}
+
+// required for AOT compilation
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}

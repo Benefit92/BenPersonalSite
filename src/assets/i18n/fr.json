@@ -1,0 +1,12 @@
+{
+  "demo": {
+    "title": "Translation Demo (Francais)",
+    "text": "﻿J'en est aucun idee se qu'on mets ici",
+    "greeting": "Bonjour {{name}}!"
+  },
+  "languageSelect": {
+    "english": "Anglais",
+    "french": "Français",
+    "german": "Allemand"
+  }
+}
