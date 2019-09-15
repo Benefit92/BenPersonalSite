@@ -9,7 +9,9 @@ import { ContactService } from '../../services/contact.service';
 export class ContactComponent {
 
   contactMeForm = new FormGroup({
-    firstName: new FormControl(''), lastName: new FormControl(''), messageBody: new FormControl(''),
+    firstName: new FormControl(''),
+    lastName: new FormControl(''),
+    messageBody: new FormControl(''),
   });
 
   constructor(public toastService: ToastService, private contactService: ContactService) {

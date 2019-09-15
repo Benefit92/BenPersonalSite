@@ -8,9 +8,9 @@ import { ContactComponent } from './pages/contact/components/contact/contact.com
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
-  { path: 'blog', component: BlogComponent },
-  { path: 'about', component: AboutComponent },
-  { path: 'contact', component: ContactComponent },
+  { path: 'blog', component: BlogComponent},
+  { path: 'about', component: AboutComponent},
+  { path: 'contact', component: ContactComponent},
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
 ];

@@ -1,0 +1,15 @@
+<div class="btn-group btn-group-toggle" ngbRadioGroup name="radioBasic" [(ngModel)]="language"
+     (ngModelChange)="useLanguage($event)">
+  <label ngbButtonLabel class="btn-primary">
+    <input ngbButton type="radio" value="en"> {{'languageSelect.english' | translate}}
+  </label>
+  <label ngbButtonLabel class="btn-primary">
+    <input ngbButton type="radio" value="fr"> {{'languageSelect.french' | translate}}
+  </label>
+  <label ngbButtonLabel class="btn-primary">
+    <input ngbButton type="radio" value="de"> {{'languageSelect.german' | translate}}
+  </label>
+</div>
+<div>
+  {{'card.body' | translate}}
+</div>

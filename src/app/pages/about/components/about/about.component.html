@@ -1,16 +1,15 @@
-<h1>{{ 'demo.title' | translate }}</h1>
-<p>Let's see how this translation stuff works!</p>
-<div class="card" style="width: 18rem;">
-  <div class="btn-group btn-group-toggle" ngbRadioGroup name="radioBasic" [(ngModel)]="language"
-       (ngModelChange)="useLanguage($event)">
-    <label ngbButtonLabel class="btn-primary">
-      <input ngbButton type="radio" value="en"> {{'languageSelect.english' | translate}}
-    </label>
-    <label ngbButtonLabel class="btn-primary">
-      <input ngbButton type="radio" value="fr"> {{'languageSelect.french' | translate}}
-    </label>
-    <label ngbButtonLabel class="btn-primary">
-      <input ngbButton type="radio" value="de"> {{'languageSelect.german' | translate}}
-    </label>
+<h1>{{ 'aboutTitle' | translate }}</h1>
+<div class="card" >
+  <div class="card-body">
+    <h5 class="card-title">{{'card.title' |translate}}</h5>
+    <app-languages></app-languages>
   </div>
+  <div>
+    <a href="https://www.duolingo.com/profile/BenjaminNielsen" class="duolingo-invite">
+      <img src="../../../../../assets/images/duolingo_2018_logo_social.png" style="width: 100px; height: 100px"  title="Link to DuoLingo Profile" alt="Link to DuoLingo Profile">
+    </a>
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+
 </div>

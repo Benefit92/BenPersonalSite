@@ -1,7 +1,8 @@
 {
-  "demo": {
-    "title": "Translation Demo (Francais)",
-    "text": "﻿J'en est aucun idee se qu'on mets ici",
+    "aboutTitle" : "Moi",
+  "card": {
+    "title": "Langages",
+    "body": "﻿J'en est aucun idee se qu'on mets ici",
     "greeting": "Bonjour {{name}}!"
   },
   "languageSelect": {

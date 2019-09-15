@@ -1,7 +1,8 @@
 {
-  "demo": {
-    "title": "Translation demo",
-    "text": "This is a simple demonstration app for ngx-translate",
+  "aboutTitle" : "About",
+  "card": {
+    "title": "Languages",
+    "body": "This is a blurb where I talk about the languages I speak, or am trying to speak. English is probably the least interesting language, so I won't go into too much detail on it. It is my first language and I learned it the way everyone learns their first language. Click on one of the other languages to learn about them. ",
     "greeting": "Hello {{name}}!"
   },
   "languageSelect": {

@@ -1,7 +1,8 @@
 {
-  "demo": {
-    "title": "Übersetzungs-Demo",
-    "text": "﻿Dies ist eine einfache Applikation um die Funktionen von ngx-transalte zu demonstrieren.",
+  "aboutTitle" : "Mich",
+  "card": {
+    "title": "Sprachen",
+    "body": "﻿Dies ist eine einfache Applikation um die Funktionen von ngx-transalte zu demonstrieren.",
     "greeting": "Hallo {{name}}!"
   },
   "languageSelect": {

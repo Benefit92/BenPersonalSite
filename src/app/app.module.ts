@@ -18,6 +18,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 // import ngx-translate and the http loader
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { LanguagesComponent } from './pages/about/components/about/languages/languages.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
     BlogComponent,
     AboutComponent,
     ContactComponent,
+    LanguagesComponent,
     ToastsComponent
   ], imports: [
     BrowserModule,
