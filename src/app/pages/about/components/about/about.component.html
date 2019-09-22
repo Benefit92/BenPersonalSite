@@ -1,15 +1,21 @@
 <h1>{{ 'aboutTitle' | translate }}</h1>
-<div class="card" >
-  <div class="card-body">
-    <h5 class="card-title">{{'card.title' |translate}}</h5>
-    <app-languages></app-languages>
-  </div>
-  <div>
-    <a href="https://www.duolingo.com/profile/BenjaminNielsen" class="duolingo-invite">
-      <img src="../../../../../assets/images/duolingo_2018_logo_social.png" style="width: 100px; height: 100px"  title="Link to DuoLingo Profile" alt="Link to DuoLingo Profile">
-    </a>
-  </div>
-</div>
-<div class="card" style="width: 18rem;">
-
-</div>
+<ngb-tabset justify="fill">
+  <ngb-tab title="{{'card.title' |translate}}">
+    <ng-template ngbTabContent>
+      <app-languages></app-languages>
+      <!--          <h5 class="card-title">{{'card.title' |translate}}</h5>-->
+    </ng-template>
+  </ngb-tab>
+  <ngb-tab title="Simple">
+    <ng-template ngbTabContent>
+      <!--          <h5 class="card-title">{{'card.title' |translate}}</h5>-->
+      Lots of pants
+    </ng-template>
+  </ngb-tab>
+  <ngb-tab title="pimple">
+    <ng-template ngbTabContent>
+      <!--          <h5 class="card-title">{{'card.title' |translate}}</h5>-->
+      Lots of pants
+    </ng-template>
+  </ngb-tab>
+</ngb-tabset>

@@ -13,3 +13,14 @@
 <div>
   {{'card.body' | translate}}
 </div>
+<div>
+  <a>
+    <img [ngClass]="{'duolingo-invite': true, 'bigger-duo': duoIsHovered}"
+         (click)="onImageClick()"
+         (mouseenter)="mouseEnter()"
+         (mouseleave)="mouseLeave()"
+         src="../../../../../../assets/images/duolingo_2018_logo_social.png"
+         title="Link to DuoLingo Profile"
+         alt="Link to DuoLingo Profile">
+  </a>
+</div>
