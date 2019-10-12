@@ -20,6 +20,7 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { LanguagesComponent } from './pages/about/components/about/languages/languages.component';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,7 @@ import { NavbarComponent } from './shared/components/navbar/navbar.component';
       loader: {
         provide: TranslateLoader, useFactory: HttpLoaderFactory, deps: [ HttpClient ]
       }
-    }), AppRoutingModule, NgbModule, environment.production ? HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {delay: 100}) : []
+    }), AppRoutingModule, NgbModule, environment.production ? HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {delay: 100}) : [], ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production})
   ],
   providers: [],
   bootstrap: [ AppComponent ]
